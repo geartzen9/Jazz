@@ -16,11 +16,11 @@ namespace Jazz
         {
             InitializeComponent();
 
-            //Items toevoegen aan Combobox1
+            //Add items to combobox.
             Object translate1 = new Object();
             Object translate2 = new Object();
-            translate1 = "Engels > Nederlands";
-            translate2 = "Nederlands > Engels";
+            translate1 = "English > Dutch";
+            translate2 = "Dutch > English";
             comboBox1.Items.Add(translate1);
             comboBox1.Items.Add(translate2);
         }
@@ -31,7 +31,7 @@ namespace Jazz
             string webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/EN-NL.html");
             richTextBox1.Text = webData;
 
-            //Kijken welke talen er zijn geselecteerd.
+            //Look which language is selected in the combobox.
             if (comboBox1.SelectedIndex == 0)
             {
                 webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/EN-NL.html");
@@ -42,9 +42,9 @@ namespace Jazz
                 webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/NL-EN.html");
             }
 
-            String[] commands = { "schoonmaken", "afsluiten", "woord:"};
+            String[] commands = { "clear", "quit", "word:"};
 
-            //Het scherm leegmaken als de gebruiker 'schoonmaken' intypt.
+            //Clear screen when user types "clear".
             if (e.KeyCode == Keys.Enter && input.Text == commands[0])
             {
                 output.Text = null;
@@ -52,7 +52,7 @@ namespace Jazz
                 input.Text = null;
             }
 
-            //De applicatie afsluiten als de gebruiker 'afsluiten' intypt.
+            //Quit application when user types "quit".
             else if (e.KeyCode == Keys.Enter && input.Text == commands[1])
             {
                 System.Windows.Forms.Application.Exit();
@@ -60,7 +60,7 @@ namespace Jazz
                 e.Handled = true;
             }
 
-            //Defineer een woord.
+            //Translate a word.
             else if (e.KeyCode == Keys.Enter && input.Text.Contains(commands[2]))
             {
                 output.Text += Environment.NewLine;
@@ -77,24 +77,24 @@ namespace Jazz
                 }
             }
 
-            //Als de speler hoi of hallo zegt, zegt Jazz weer hallo terug op verschillende manieren.
-            else if (e.KeyCode == Keys.Enter && input.Text == "hallo" || e.KeyCode == Keys.Enter && input.Text == "hoi")
+            //If the user types in "hi" or "hello", give feedback.
+            else if (e.KeyCode == Keys.Enter && input.Text == "hello" || e.KeyCode == Keys.Enter && input.Text == "hi")
             {
                 Random rand = new Random();
                 int num = rand.Next(1, 5);
-                String[] choose = { "Hallo!", "Hoi...", "Goeie dag!", "Gegroet!", "Hallo gebruiker!" };
+                String[] choose = { "Hello!", "Hi...", "Good day!", "Greatings!", "Hello user!" };
                 string choise = choose[num];
 
                 output.Text += Environment.NewLine + choise;
             }
 
-            //Feedback geven als Jazz een woord niet kent.
+            //Give feedback when Jazz doesn't know a command.
             else if (e.KeyCode == Keys.Enter && input.Text != commands[0] && input.Text != commands[1] && input.Text != commands[2] && input.Text != "hello" && input.Text != "hi")
             {
-                output.Text += Environment.NewLine + "Ik weet niet wat je bedoelt...";
+                output.Text += Environment.NewLine + "I don't know what you meen...";
             }
 
-            //Ervoor zorgen dat input leeg wordt en dat je het Windows error sound niet hoort.
+            //Clear input box when user presses enter.
             if (e.KeyCode == Keys.Enter)
             {
                 input.Text = null;
@@ -103,23 +103,23 @@ namespace Jazz
             }
         }
 
-        //Focus naar het input field.
+        //Focus to input box.
         private void Form1_Load(object sender, EventArgs e)
         {
             input.Select();
         }
 
-        //Help form komt als je op deze knop klikt
+        //Help form appears when user pressed helpBut.
         private void helpBut_Click(object sender, EventArgs e)
         {
             helpForm help = new helpForm();
             help.Show();
         }
 
-        //Ga naar de webpagina
+        //Go to webpage to add a word. (doesn't work yet)
         private void addWordBut_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.gepps.nl/Jazz/addword.html");
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         }
     }
 }

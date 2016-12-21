@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="helpText.Text" xml:space="preserve">
-    <value>Jazz is een programma die je kan helpen met woorden vertalen.
-Je kunt de talen selecteren die je wilt en dan kun je intypen welk woord je wilt vertalen.
+    <value>Jazz is an application that allows you to translate a word simple and fast.
+You can select a language and type in the word that you want to translate.
 
-Commando's die je kunt gebruiken:
-- "schoonmaken": het scherm leeg maken.
-- "afsluiten": het programma afsluiten.
-- "woord:": een woord vertalen in een andere taal.
+Commands you can use:
+- "clear": Clear the screen.
+- "quit": Quit the application.
+- "word:...": Translate a word.
 
-Als je een woord hebt waarop Jazz geen antwoord op geeft:
-- Kijk goed na of je geen type fout hebt gemaakt.
-- Klik op de knop "Woord toevoegen" in de balk "Taal" om je woord toe te voegen.
-  Type in het veld "Woord:" je woord in en type de taal in het veld "Taal:".</value>
+If Jazz doesn't answer when you type a word and hit enter:
+- Check for typo's.
+- Press "Add word" in the bar "Language" to add your word. (this button doesn't work yet.)
+  Type in the field "Word:" your word and type the language in the field "Language:".</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

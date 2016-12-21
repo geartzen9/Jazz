@@ -62,8 +62,8 @@ namespace Jazz
             this.output.ReadOnly = true;
             this.output.Size = new System.Drawing.Size(446, 321);
             this.output.TabIndex = 0;
-            this.output.Text = "Welkom, mijn naam is Jazz! [Versie 0.01 Alpha]\n\nKlik op \'help\' om te zien wat je " +
-    "kunt doen.";
+            this.output.Text = "Welcome, my name is Jazz! [Version 0.01 Alpha]\n\nPress \"Help\" to see what I can do" +
+    ".";
             // 
             // input
             // 
@@ -73,10 +73,10 @@ namespace Jazz
             this.input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input.ForeColor = System.Drawing.Color.Black;
-            this.input.Location = new System.Drawing.Point(124, 684);
+            this.input.Location = new System.Drawing.Point(113, 684);
             this.input.Margin = new System.Windows.Forms.Padding(2);
             this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(260, 29);
+            this.input.Size = new System.Drawing.Size(271, 29);
             this.input.TabIndex = 1;
             this.input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -90,9 +90,9 @@ namespace Jazz
             this.label1.Location = new System.Drawing.Point(6, 686);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 22);
+            this.label1.Size = new System.Drawing.Size(103, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Commando:";
+            this.label1.Text = "Command:";
             // 
             // richTextBox1
             // 
@@ -133,18 +133,18 @@ namespace Jazz
             this.titlebar.Name = "titlebar";
             this.titlebar.Size = new System.Drawing.Size(465, 48);
             this.titlebar.TabIndex = 6;
-            this.titlebar.Text = "   Taal:";
+            this.titlebar.Text = "   Language:";
             this.titlebar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(78, 12);
+            this.comboBox1.Location = new System.Drawing.Point(118, 12);
             this.comboBox1.MaxDropDownItems = 20;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(251, 21);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "Engels > Nederlands";
+            this.comboBox1.Text = "English > Dutch";
             // 
             // helpBut
             // 
@@ -168,11 +168,11 @@ namespace Jazz
             this.addWordBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
             this.addWordBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.addWordBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addWordBut.Location = new System.Drawing.Point(336, 12);
+            this.addWordBut.Location = new System.Drawing.Point(375, 12);
             this.addWordBut.Name = "addWordBut";
-            this.addWordBut.Size = new System.Drawing.Size(108, 21);
+            this.addWordBut.Size = new System.Drawing.Size(69, 21);
             this.addWordBut.TabIndex = 9;
-            this.addWordBut.Text = "Woord toevoegen";
+            this.addWordBut.Text = "Add word";
             this.addWordBut.UseVisualStyleBackColor = false;
             this.addWordBut.Click += new System.EventHandler(this.addWordBut_Click);
             // 

@@ -40,17 +40,17 @@
             this.helpTitle.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpTitle.Location = new System.Drawing.Point(223, 9);
             this.helpTitle.Name = "helpTitle";
-            this.helpTitle.Size = new System.Drawing.Size(283, 37);
+            this.helpTitle.Size = new System.Drawing.Size(303, 37);
             this.helpTitle.TabIndex = 0;
-            this.helpTitle.Text = "Jazz [Versie 0.01]";
+            this.helpTitle.Text = "Jazz [Version 0.01]";
             // 
             // helpText
             // 
             this.helpText.AutoSize = true;
             this.helpText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpText.Location = new System.Drawing.Point(74, 85);
+            this.helpText.Location = new System.Drawing.Point(61, 85);
             this.helpText.Name = "helpText";
-            this.helpText.Size = new System.Drawing.Size(594, 216);
+            this.helpText.Size = new System.Drawing.Size(621, 216);
             this.helpText.TabIndex = 1;
             this.helpText.Text = resources.GetString("helpText.Text");
             // 
