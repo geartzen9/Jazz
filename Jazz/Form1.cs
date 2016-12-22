@@ -27,28 +27,13 @@ namespace Jazz
 
         public void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            System.Net.WebClient wc = new System.Net.WebClient();
-            string webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/EN-NL.html");
-            richTextBox1.Text = webData;
-
-            //Look which language is selected in the combobox.
-            if (comboBox1.SelectedIndex == 0)
-            {
-                webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/EN-NL.html");
-            }
-            
-            else if (comboBox1.SelectedIndex == 1)
-            {
-                webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/NL-EN.html");
-            }
-
             String[] commands = { "clear", "quit", "word:"};
 
             //Clear screen when user types "clear".
             if (e.KeyCode == Keys.Enter && input.Text == commands[0])
             {
                 output.Text = null;
-                output.Text += "Het scherm is schoongemaakt.";
+                output.Text += "The screen is cleared.";
                 input.Text = null;
             }
 
@@ -91,7 +76,7 @@ namespace Jazz
             //Give feedback when Jazz doesn't know a command.
             else if (e.KeyCode == Keys.Enter && input.Text != commands[0] && input.Text != commands[1] && input.Text != commands[2] && input.Text != "hello" && input.Text != "hi")
             {
-                output.Text += Environment.NewLine + "I don't know what you meen...";
+                output.Text += Environment.NewLine + "I don't know what you mean...";
             }
 
             //Clear input box when user presses enter.
@@ -120,6 +105,27 @@ namespace Jazz
         private void addWordBut_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            System.Net.WebClient wc = new System.Net.WebClient();
+            string webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/EN-NL.html");
+            richTextBox1.Text = webData;
+
+            //Look which language is selected in the combobox.
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/EN-NL.html");
+                    richTextBox1.Text = webData;
+                    break;
+
+                case 1:
+                    webData = wc.DownloadString("http://www.gepps.nl/Jazz/language/NL-EN.html");
+                    richTextBox1.Text = webData;
+                    break;
+            }
         }
     }
 }
