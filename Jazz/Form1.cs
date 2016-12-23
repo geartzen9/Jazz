@@ -104,7 +104,7 @@ namespace Jazz
         //Go to webpage to add a word. (doesn't work yet)
         private void addWordBut_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            System.Diagnostics.Process.Start("http://www.gepps.nl/Jazz/addword.html");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
